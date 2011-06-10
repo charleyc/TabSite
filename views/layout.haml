@@ -1,0 +1,24 @@
+!!!
+%html
+  %head
+    %title Probably the Greatest Tablature Server of ALL TIME
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/main.css"}
+  %body
+    %ul.horizontal
+      %li
+        %a{:href => "/"} Home
+      %li
+        %a{:href => "/search"} Search
+      -if logged_in?
+        %li
+          %a{:href => "/submit"} Submit
+      %li
+        - if !logged_in?
+          %a{:href => "/login"} Log In
+        - else
+          %a{:href => "/logout"} Log Out
+      - if !@error_message.nil?
+        .error== #{@error_message}
+      - if !@message.nil?
+        .message== #{@message}
+      = yield

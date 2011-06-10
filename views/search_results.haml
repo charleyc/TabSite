@@ -1,0 +1,11 @@
+%h1 Search Results
+
+%p== Your query: #{@query}
+
+%p Your results:
+%ul
+  - @results.each do |tab|
+    %li
+      %a{:href => "/tabs/#{tab}"} #{tab}
+
+%p And that's all!

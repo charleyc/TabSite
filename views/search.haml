@@ -1,0 +1,10 @@
+%h1 Search page
+
+%p
+  %form{:action => '/search', :method => 'post'}
+    %legend Search for a tab! (try "test")
+    %p
+      %label{:for => "search"}
+      %input{:type => "text", :name => "query", :id => "query"}
+    %p
+      %input{:type => "submit"}

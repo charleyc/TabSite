@@ -1,0 +1,22 @@
+%h1 Submit a tab!
+
+%form{:action => '/submit', :method => 'post', :enctype => 'multipart/form-data'}
+  %legend Submit new tablature
+  %p
+    Title:
+    %label{:for => 'title'}
+    %input{:type => 'text', :name => 'title', :id => 'title'}
+  %p
+    Artist:
+    %label{:for => 'artist'}
+    %input{:type => 'text', :name => 'artist', :id => 'artist'}
+  %p
+    Tab File (.txt only!):
+  %label{:for => 'tab_file'}
+  %input{:type => 'file', :name => 'tab_file', :id => 'tab_file', :accept => 'text/plain'}
+  -#  %p OR Text:
+  -#  %p
+  -#    %label{:for => 'tab_text'}
+  -#    %textarea{:name => 'tab_text', :id => 'tab_text', :rows => '50'}
+  %p
+    %input{:type => 'submit'}
