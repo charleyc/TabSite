@@ -1,1 +1,6 @@
 A very basic tablature server, my first foray into Ruby, Sinatra, or anything web 2.0.
+
+Heavily based on nanodeath's SinatraHamlSignin: https://github.com/nanodeath/SinatraHamlSignin
+
+Run using:
+rackup config.ru --port=XXXX
